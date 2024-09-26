@@ -32,10 +32,10 @@ public class Ejemplo_11_Lectura_Booleanos_DataInput {
 		e=datin.readBoolean();
 		   if (e) {
                asis = "Si";
+			   System.out.println("Nombre:"+n+" Asiste:"+asis);
            } else {
                asis = "No";
            }//Fin if
-		System.out.println("Nombre:"+n+", Asiste:"+asis);
 		}//Fin while
 		
 		}catch(EOFException eo) {}//Fin try-catch
