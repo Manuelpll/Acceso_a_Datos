@@ -15,10 +15,9 @@ public class Ejemplo_16_Añadir_Cancion {
         String titulo;
         String artista;
         String duracion;
-        String respuesta;
         boolean cancionEspañola;
         if (archivo.exists()) {
-            dataOs = new ObjectOutputStream(new FileOutputStream(archivo));
+            dataOs = new MiObjectOutputStream(new FileOutputStream(archivo, true));
         }else{
             FileOutputStream fos = new FileOutputStream(archivo);
             dataOs = new ObjectOutputStream(fos);

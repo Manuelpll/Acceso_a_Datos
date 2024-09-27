@@ -18,7 +18,6 @@ public class Ejemplo_15_Crear_Fichero_Canciones {
         String titulo;
         String artista;
         String duracion;
-        String respuesta;
         boolean cancionEspañola;
         while (decision == 1) {
                  System.out.println("Escribe su identificador");
