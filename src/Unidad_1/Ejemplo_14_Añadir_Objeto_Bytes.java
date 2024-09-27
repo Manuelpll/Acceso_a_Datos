@@ -12,20 +12,19 @@ public class Ejemplo_14_Añadir_Objeto_Bytes {
         ObjectInputStream datain= new ObjectInputStream(fis);
         String nombre="Borja";
         int edades= 21;
-        //Fin
         for (int i = 0; i <2 ; i++) {
             persona= new Persona(nombre,edades);
             dataOs.writeObject(persona);
-        }
+        }//Fin for
         dataOs.close();
         try {
             while (true){
                 persona =(Persona) datain.readObject();
                 System.out.printf("Nombre: %s\nEdad: %d\n",persona.getNombre(),persona.getEdad());
-            }
+            }//Fin while
         }catch (EOFException | ClassNotFoundException e){
             System.out.println("Fin de lectura");
-        }
+        }//Fin try-catch
         datain.close();
-    }
-}
+    }//Fin main
+}//Fin de Ejemplo_14_Añadir_Objeto_Bytes
