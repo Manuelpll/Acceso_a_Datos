@@ -1,27 +1,27 @@
 package Unidad_1;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.util.Scanner;
 
-public class Ejemplo_20_Añadir_Informacion_Fichero_Aleatorio {
+public class Ejemplo_22_Modificar_Informacion_Fichero_aleatorio {
     public static void main(String[] args) throws IOException {
         File fichero =new File("C:\\Users\\aludam2\\Desktop\\AD\\Aleatorio.dat");
         RandomAccessFile file= new RandomAccessFile (fichero, "rw");
-        StringBuffer buffer =null;
         Scanner sc = new Scanner(System.in);
-        System.out.println("Escribe el apellido (No superior a 10 caracteres): ");
-        String apellido = sc.nextLine() ;
-        System.out.println("Escribe el salario");
-        double salario = sc.nextDouble();
+        StringBuffer buffer =null;
+        int id;
         System.out.println("Escribe el id");
-        int id = sc.nextInt();
-        System.out.println("Escribe el departamento");
-        int dep = sc.nextInt();
-        if(existeEmpleado(file,id)){
-            System.out.println("El empleado ya existe");
-        }else {
+        id = sc.nextInt();
+        if (existeEmp(file, id)) {
+            System.out.println("Se puede modificar"+"\nEscribe el apellido (No superior a 10 caracteres): ");
+            String apellido = sc.nextLine() ;
+            System.out.println("Escribe el salario");
+            double salario = sc.nextDouble();
+            System.out.println("Escribe el departamento");
+            int dep = sc.nextInt();
             long posicion = (id - 1) * 36;
             file.seek(posicion);
             file.writeInt(id);
@@ -30,10 +30,11 @@ public class Ejemplo_20_Añadir_Informacion_Fichero_Aleatorio {
             file.writeChars(buffer.toString());
             file.writeInt(dep);
             file.writeDouble(salario);
-            file.close();
+        } else {
+            System.out.println("El empleado no existe");
         }//Fin if-else
     }//Fin main
-    private static boolean existeEmpleado(RandomAccessFile file, int id) throws IOException {
+    private static boolean existeEmp(RandomAccessFile file, int id) throws IOException {
         file.seek(0);
         while (file.getFilePointer() < file.length()) {
             int idLeido = file.readInt();
@@ -43,5 +44,5 @@ public class Ejemplo_20_Añadir_Informacion_Fichero_Aleatorio {
             }//Fin if
         }//Fin while
         return false;
-    }//Fin existe empleado
-}//Fin Ejemplo_20_Añadir_Informacion_Fichero_Aleatorio
+    }//Fin existe
+}

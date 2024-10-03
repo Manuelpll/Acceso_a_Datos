@@ -1,11 +1,10 @@
 package Unidad_1;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 
-public class Ejemplo_19_Lectura_Fichero_Aleatorio {
+public class Ejemplo_19_Lectura_Fichero_Aleatorio_Como_Secuencial {
     public static void main(String[] args) throws IOException {
         File fichero =new File("C:\\Users\\aludam2\\Desktop\\AD\\Aleatorio.dat");
         RandomAccessFile file= new RandomAccessFile (fichero, "r");
@@ -31,4 +30,4 @@ public class Ejemplo_19_Lectura_Fichero_Aleatorio {
             if(file.getFilePointer()== file.length()) break;
         }//Fin for
     }//Fin main
-}//Fin Ejemplo_19_Lectura_Fichero_Aleatorio
+}//Fin Ejemplo_19_Lectura_Fichero_Aleatorio_Como_Secuencial
