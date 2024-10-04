@@ -7,7 +7,7 @@ public class Ejemplo_18_Escritura_Fichero_Aleatorio {
          String apellido[] ={"FERNANDEZ", "GIL", "LOPEZ", "RAMOS", "SEVILLA", "CASILLA", "REY"};
          Double salario[] ={1000.45, 2400.60, 3000.0, 1500.56, 2200.0, 1435.87, 2000.0};
          int dep[] = {10, 20, 10, 10, 30, 30, 20};
-         StringBuffer buffer =null;
+        StringBuffer buffer =null;
          int n =apellido.length;
          for (int i=0; i<n; i++) {
              file.writeInt(i + 1);

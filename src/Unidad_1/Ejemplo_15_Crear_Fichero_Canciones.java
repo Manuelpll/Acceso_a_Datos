@@ -12,7 +12,7 @@ public class Ejemplo_15_Crear_Fichero_Canciones {
         File archivo = new File("C:\\Users\\aludam2\\Desktop\\AD\\Canciones.dat");
         FileOutputStream fos = new FileOutputStream(archivo);
         ObjectOutputStream dataOs = new ObjectOutputStream(fos);
-        int identificador;
+        int identificador= 1;
         int año;
         int decision=1;
         String titulo;
@@ -20,8 +20,6 @@ public class Ejemplo_15_Crear_Fichero_Canciones {
         String duracion;
         boolean cancionEspañola;
         while (decision == 1) {
-                 System.out.println("Escribe su identificador");
-                 identificador= teclado.nextInt();
                  System.out.println("Escribe el año de la cancion");
                  año= teclado.nextInt();
                  System.out.println("Escribe el titulo de la cancion");
@@ -42,6 +40,7 @@ public class Ejemplo_15_Crear_Fichero_Canciones {
                      Pulsa 1 si quieres añadir una cancion
                      Pulsa cualquier otro numero si ya no quieres añadir más""");
             decision= teclado.nextInt();
+            identificador +=1;
          }//Fin while
          dataOs.close();
     }//Fin main
