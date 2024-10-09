@@ -90,10 +90,10 @@ public class Ejemplo_24_Añadir_Cancion_Fichero_Aleatorio_Canciones {
             }//Fin while
         }catch (EOFException e){
             System.out.println("Fin de lectura");
-        }//Fin try-catch
+        }
         catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
-        }
+        }//Fin try-catch
         datain.close();
         file.close();
     }//Fin main
