@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Empleados>
     <empleado>
-    <id>1</id>
-    <apellido>FERNANDEZ</apellido>
+        <id>1</id>
+        <apellido>FERNANDEZ</apellido>
         <dep>10</dep>
         <salario>1000.45</salario>
     </empleado>

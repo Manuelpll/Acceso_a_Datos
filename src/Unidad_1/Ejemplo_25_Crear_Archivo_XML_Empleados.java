@@ -43,6 +43,12 @@ public class Ejemplo_25_Crear_Archivo_XML_Empleados {
             Result result = new StreamResult(new java.io.File("Empleados.xml"));
             Transformer tf = TransformerFactory.newInstance().newTransformer();
             tf.transform(source,result);
+            tf.setOutputProperty(OutputKeys.INDENT, "yes");
+            tf.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
+            tf.transform(source,result);
+            //Mostrar el documento por consola
+            Result console = new StreamResult(System.out);
+            tf.transform(source, console);
         } catch (ParserConfigurationException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {

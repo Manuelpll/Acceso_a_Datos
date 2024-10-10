@@ -10,7 +10,6 @@ public class Ejemplo_26_Crear_Archivo_XML_Canciones {
         File fichero = new File("C:\\Users\\aludam2\\Desktop\\AD\\CancionesAle.dat");
         RandomAccessFile file = new RandomAccessFile(fichero,"r");
         int posicion=0;
-        Double salario;
         char titulo[] = new char[20];
         char artista[] = new char[20],aux ,auy,auz;
         char duracion[] = new char[20];
