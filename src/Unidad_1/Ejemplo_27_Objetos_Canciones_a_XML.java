@@ -4,7 +4,6 @@ import org.w3c.dom.DOMImplementation;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Text;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -54,6 +53,9 @@ public class Ejemplo_27_Objetos_Canciones_a_XML {
             Result result = new StreamResult(new File("Canciones2.xml"));
             Transformer tf = TransformerFactory.newInstance().newTransformer();
             tf.transform(source, result);
+            tf.setOutputProperty(OutputKeys.INDENT, "yes");
+            tf.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
+            tf.transform(source,result);
             //Mostrar el documento por consola
             Result console = new StreamResult(System.out);
             tf.transform(source, console);

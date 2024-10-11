@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<movies>
+    <movie>
+        <title>Inception</title>
+        <director>Christopher Nolan</director>
+        <year>2010</year>
+        <genre>Science Fiction</genre>
+        <rating>8.8</rating>
+    </movie>
+    <movie>
+        <title>The Godfather</title>
+        <director>Francis Ford Coppola</director>
+        <year>1972</year>
+        <genre>Crime, Drama</genre>
+        <rating>9.2</rating>
+    </movie>
+    <movie>
+        <title>Parasite</title>
+        <director>Bong Joon Ho</director>
+        <year>2019</year>
+        <genre>Thriller, Drama</genre>
+        <rating>8.6</rating>
+    </movie>
+    <movie>
+        <title>Pulp Fiction</title>
+        <director>Quentin Tarantino</director>
+        <year>1994</year>
+        <genre>Crime, Drama</genre>
+        <rating>8.9</rating>
+    </movie>
+</movies>

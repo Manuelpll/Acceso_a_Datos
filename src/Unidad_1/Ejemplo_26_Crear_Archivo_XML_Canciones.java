@@ -59,6 +59,9 @@ public class Ejemplo_26_Crear_Archivo_XML_Canciones {
             Result result = new StreamResult(new java.io.File("Canciones.xml"));
             Transformer tf = TransformerFactory.newInstance().newTransformer();
             tf.transform(source,result);
+            tf.setOutputProperty(OutputKeys.INDENT, "yes");
+            tf.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
+            tf.transform(source,result);
         } catch (ParserConfigurationException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
