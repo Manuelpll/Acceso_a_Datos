@@ -56,7 +56,7 @@ public class Ejemplo_26_Crear_Archivo_XML_Canciones {
                 if(file.getFilePointer() == file.length()) break;
             }
             Source source = new DOMSource(document);
-            Result result = new StreamResult(new java.io.File("Canciones.xml"));
+            Result result = new StreamResult(new java.io.File("Archivos/Canciones.xml"));
             Transformer tf = TransformerFactory.newInstance().newTransformer();
             tf.transform(source,result);
             tf.setOutputProperty(OutputKeys.INDENT, "yes");

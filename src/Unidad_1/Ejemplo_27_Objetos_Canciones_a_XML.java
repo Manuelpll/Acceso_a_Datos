@@ -50,7 +50,7 @@ public class Ejemplo_27_Objetos_Canciones_a_XML {
                 }//Fin try-catch
             }//Fin while
             Source source = new DOMSource(document);
-            Result result = new StreamResult(new File("Canciones2.xml"));
+            Result result = new StreamResult(new File("Archivos/Canciones2.xml"));
             Transformer tf = TransformerFactory.newInstance().newTransformer();
             tf.transform(source, result);
             tf.setOutputProperty(OutputKeys.INDENT, "yes");

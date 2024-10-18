@@ -13,9 +13,9 @@ public class Ejemplo_32_XML_a_HTML_Alumnos {
         public static void main(String[] args) throws IOException {
 
             String hojaEstilo = "alumnosplantilla.xsl";
-            String datosAlumnos = "alumnos.xml";
+            String datosAlumnos = "Archivos/alumnos.xml";
 
-            File pagina_html = new File("alumnos.html");
+            File pagina_html = new File("Archivos/alumnos.html");
             FileOutputStream output = new FileOutputStream(pagina_html); //crear fichero HTML
 
             Source estilos =new StreamSource(hojaEstilo); //fuente XSL

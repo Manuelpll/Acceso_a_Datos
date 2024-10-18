@@ -40,7 +40,7 @@ public class Ejemplo_25_Crear_Archivo_XML_Empleados {
                 if(file.getFilePointer() == file.length()) break;
             }
             Source source = new DOMSource(document);
-            Result result = new StreamResult(new java.io.File("Empleados.xml"));
+            Result result = new StreamResult(new java.io.File("Archivos/Empleados.xml"));
             Transformer tf = TransformerFactory.newInstance().newTransformer();
             tf.transform(source,result);
             tf.setOutputProperty(OutputKeys.INDENT, "yes");

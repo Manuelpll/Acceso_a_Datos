@@ -17,7 +17,7 @@ public class Ejemplo_28_Leer_Archivo_XML_Empleados {
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
         try{
             DocumentBuilder builder = dbf.newDocumentBuilder();
-            Document doc = builder.parse(new File("Empleados.xml"));
+            Document doc = builder.parse(new File("Archivos/Empleados.xml"));
             doc.getDocumentElement().normalize();
             System.out.printf("Elemento raiz: %s %n", doc.getDocumentElement().getNodeName());
             NodeList nList = doc.getElementsByTagName("empleado");

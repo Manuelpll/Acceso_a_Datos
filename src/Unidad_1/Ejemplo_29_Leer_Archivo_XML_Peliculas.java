@@ -16,7 +16,7 @@ public class Ejemplo_29_Leer_Archivo_XML_Peliculas {
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
         try{
             DocumentBuilder builder = dbf.newDocumentBuilder();
-            Document doc = builder.parse(new File("Peliculas.xml"));
+            Document doc = builder.parse(new File("Archivos/Peliculas.xml"));
             doc.getDocumentElement().normalize();
             System.out.printf("Elemento raiz: %s %n", doc.getDocumentElement().getNodeName());
             NodeList nList = doc.getElementsByTagName("movie");

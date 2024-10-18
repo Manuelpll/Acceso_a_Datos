@@ -32,7 +32,7 @@ public class Ejemplo_30_Escribir_XStream {
             //quitar etiqueta lista (atributo de la clase ListaPersonas)
             xstream.addImplicitCollection(ListaPersonas.class, "list");
             //Insertar los objetos en el XML
-            xstream.toXML(listaper, new FileOutputStream("Personas.xml"));
+            xstream.toXML(listaper, new FileOutputStream("Archivos/Personas.xml"));
             System.out.println("Creado fichero XML....");
         } catch (Exception e) {
             e.printStackTrace();

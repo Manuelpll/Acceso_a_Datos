@@ -14,9 +14,9 @@ public class Ejemplo_33_XML_a_HTML_Canciones {
     public static void main(String[] args) throws IOException {
 
         String hojaEstilo = "C:\\Users\\aludam2\\IdeaProjects\\Acceso_a_Datos\\plantillaCanciones.xslt";
-        String datosAlumnos = "Canciones.xml";
+        String datosAlumnos = "Archivos/Canciones.xml";
 
-        File pagina_html = new File("Canciones.html");
+        File pagina_html = new File("Archivos/Canciones.html");
         FileOutputStream output = new FileOutputStream(pagina_html); //crear fichero HTML
 
         Source estilos =new StreamSource(hojaEstilo); //fuente XSL

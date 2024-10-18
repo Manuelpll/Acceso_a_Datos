@@ -16,7 +16,7 @@ public class Ejemplo_31_Leer_ArchivoXML_XStream {
         xstream.addImplicitCollection(ListaPersonas.class, "list");
 
         // Leer el XML y convertirlo en un objeto ListaPersonas
-        ListaPersonas listadoTodas = (ListaPersonas) xstream.fromXML(new FileInputStream("Personas.xml"));
+        ListaPersonas listadoTodas = (ListaPersonas) xstream.fromXML(new FileInputStream("Archivos/Personas.xml"));
 
         // Mostrar el número total de personas
         System.out.println("Número de Personas: " + listadoTodas.getList().size());

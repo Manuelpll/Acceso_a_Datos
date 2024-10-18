@@ -1,14 +1,13 @@
 package Unidad_1;
 import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Marshaller;
-import jakarta.xml.bind.Unmarshaller;
+
 public class Ejemplo_34_JAXB {
-    private static final String MIARCHIVO_XML = "libreria.xml";
+    private static final String MIARCHIVO_XML = "Archivos/libreria.xml";
 
     public static void main(String[] args) throws JAXBException, IOException {
         // Se crea la lista de libros
@@ -25,7 +24,7 @@ public class Ejemplo_34_JAXB {
         // Se crea la Librería y se le asigna la lista de libros
         Libreria milibreria = new Libreria();
         milibreria.setListaLibro(libroLista);
-        milibreria.setNombre("Prueba de libreria JAXB");
+        milibreria.setNombre("Prueba de libreria Unidad_1.JAXB");
         milibreria.setLugar("Talavera, como no");
 
         // Creamos el contexto indicando la clase raíz
