@@ -1,8 +1,8 @@
   package Unidad_1;
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Arrays;
-public class Ejemplo_7 {
+
+  public class Ejemplo_7_Adicion_y_ordenacion_de_fichero_antiguo {
 	public static void main(String[] args) throws IOException {
 		File fichero= new File("C:\\Users\\aludam2\\Desktop\\AD\\provincias.txt");
 		FileWriter fic = new FileWriter(fichero,true);

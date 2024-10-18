@@ -1,7 +1,7 @@
 package Unidad_1;
 import java.io.*;
-import java.util.Arrays;
-public class Ejemplo_6 {
+
+public class Ejemplo_6_Escritura_de_List_en_Fichero {
     static void arrayReverse(String[] array){
         for (int i=0;i< array.length/2;i++){
            String temp=array[i];

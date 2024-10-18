@@ -7,7 +7,7 @@ import java.io.IOException;
  * Programa que lee un programa de 20 en 20
  * @author Mpll
  */
-public class Ejemplo_4 {
+public class Ejemplo_4_Visualizacion_de_fichero {
 	/**
 	 * Metodo principal que ejecuta el program
 	 * @param args - Los argumentos de la linea de comandos

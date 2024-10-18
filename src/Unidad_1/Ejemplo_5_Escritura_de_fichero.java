@@ -1,6 +1,6 @@
 package Unidad_1;
 import java.io.*;
-public class Ejemplo_5 {
+public class Ejemplo_5_Escritura_de_fichero {
 
 	public static void main(String[] args) throws IOException {
 		File fichero= new File("C:\\Users\\aludam2\\Desktop\\AD\\nuevo.txt");
