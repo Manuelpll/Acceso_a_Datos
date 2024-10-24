@@ -5,7 +5,7 @@ import java.io.*;
  * @author Mpll
  * @date 18/09/2024
  */
-public class Ejemplo_2 {
+public class Ejemplo_2_Visualizacion_de_datos_de_fichero {
 public static void main (String[] args) {
 	System.out.println("INFORMACION SOBRE EL FICHERO");
 	File f = new File("C:\\Users\\aludam2\\Desktop\\AD\\prueba.txt");

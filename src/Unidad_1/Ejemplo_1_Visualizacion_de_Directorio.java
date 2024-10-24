@@ -1,6 +1,6 @@
 package Unidad_1;
 import java.io.*;
-public class Ejemplo_1 {
+public class Ejemplo_1_Visualizacion_de_Directorio {
 public static void main(String[] args){
 String dir = "C:\\";
 File f= new File(dir);
