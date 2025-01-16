@@ -2,7 +2,7 @@ package Unidad_2;
 
 import java.sql.*;
 
-public class Ejemplo3_Conecxion_a_BDD {
+public class Ejemplo_3_Conecxion_a_BDD {
     private static final String url = "jdbc:mysql://localhost/prueba1";
     private static final String user = "prueba1";
     private static final String password = "prueba1";

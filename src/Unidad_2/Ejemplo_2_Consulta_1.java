@@ -4,7 +4,7 @@ import com.db4o.Db4oEmbedded;
 import com.db4o.ObjectContainer;
 import com.db4o.ObjectSet;
 
-public class Ejemplo2_Consulta_1 {
+public class Ejemplo_2_Consulta_1 {
     static String BDPer = "DBPersonas.yap";
     public static void main(String[] args) {
         ObjectContainer db =
