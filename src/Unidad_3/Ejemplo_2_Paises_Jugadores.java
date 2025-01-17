@@ -1,13 +1,15 @@
 package Unidad_3;
-import java.io.File;
-import org.neodatis.odb.ODB;
-import org.neodatis.odb.ODBFactory;
-import org.neodatis.odb.Objects;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+
+import org.neodatis.odb.*;
 import org.neodatis.odb.core.query.IQuery;
 import org.neodatis.odb.core.query.criteria.And;
 import org.neodatis.odb.core.query.criteria.ICriterion;
 import org.neodatis.odb.core.query.criteria.Where;
 import org.neodatis.odb.impl.core.query.criteria.CriteriaQuery;
+import org.neodatis.odb.impl.core.query.values.ValuesCriteriaQuery;
+
 public class Ejemplo_2_Paises_Jugadores {
     public static void main(String[] args) {
         //creo la conexion
@@ -86,7 +88,7 @@ public class Ejemplo_2_Paises_Jugadores {
 		E01_Paises paisborrar = (E01_Paises) odb.getObjects(query).getFirst();
 
 		odb.delete(paisborrar);*/
-
+      contadorymediaporpais(odb);
 
         odb.close();
     }
@@ -103,4 +105,37 @@ public class Ejemplo_2_Paises_Jugadores {
         }
         System.out.println("------------");
     }
+    private static void contadorymediaporpais(ODB odb) {
+        System.out.println("Número de jugadores por país, máximo de edad y media de edad: ");
+
+        Values groupby = odb.getValues(
+                new ValuesCriteriaQuery(Jugadores.class, Where.isNotNull("pais.nombrePais"))
+                        .field("pais.nombrePais")
+                        .count("nombre")
+                        .max("edad")
+                        .sum("edad")
+                        .groupBy("pais.nombrePais")
+        );
+
+        if (groupby.size() == 0) {
+            System.out.println("La consulta no devuelve datos.");
+        } else {
+            while (groupby.hasNext()) {
+                ObjectValues objetos = (ObjectValues) groupby.next();
+                float sumaEdad = ((BigDecimal) objetos.getByIndex(3)).floatValue();
+                float numJugadores = ((BigInteger) objetos.getByIndex(1)).floatValue();
+                float media = sumaEdad / numJugadores;
+
+                System.out.printf("País: %-8s | Num jugadores: %d | Edad Máxima: %.0f | Suma de Edad: %.0f | Edad media: %.2f%n",
+                        objetos.getByAlias("pais.nombrePais"),
+                        ((BigInteger) objetos.getByIndex(1)).intValue(),
+                        ((BigDecimal) objetos.getByIndex(2)).floatValue(),
+                        sumaEdad,
+                        media
+                );
+            }
+        }
+    }
+
 }
+
