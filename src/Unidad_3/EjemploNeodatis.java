@@ -2,11 +2,12 @@ package Unidad_3;
 import org.neodatis.odb.*;
 public class EjemploNeodatis {
     public static void main(String[] args) {
+        Pais pais = new Pais(1,"Butano");
         // Crear instancias para almacenar en BD
-        Jugadores j1 = new Jugadores("Maria", "Voleibol", "Madrid", 14);
-        Jugadores j2 = new Jugadores("Miguel", "Tenis", "Madrid", 15);
-        Jugadores j3 = new Jugadores("Mario", "Cuadraláser", "Madrid", 15 );
-        Jugadores j4 = new Jugadores("Alicia", "Tenis", "Madrid", 14);
+        Jugadores j1 = new Jugadores("Maria", "Voleibol", "Madrid", 14,pais);
+        Jugadores j2 = new Jugadores("Miguel", "Tenis", "Madrid", 15,pais);
+        Jugadores j3 = new Jugadores("Mario", "Cuadraláser", "Madrid", 15,pais );
+        Jugadores j4 = new Jugadores("Alicia", "Tenis", "Madrid", 14,pais);
 
         ODB odb = ODBFactory.open("neodatis.test"); // Abrir BD
 
