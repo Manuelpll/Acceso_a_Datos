@@ -48,5 +48,6 @@
     <orderEntry type="library" name="mysql-connector-5.1.18" level="project" />
     <orderEntry type="library" name="mysql.connector.j" level="project" />
     <orderEntry type="library" name="neodatis-odb-1.9.30.689" level="project" />
+    <orderEntry type="library" name="mongodb.driver.sync" level="project" />
   </component>
 </module>
