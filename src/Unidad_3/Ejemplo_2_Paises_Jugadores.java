@@ -38,10 +38,10 @@ public class Ejemplo_2_Paises_Jugadores {
         System.out.println(objects.size() + " jugadores:");
 
         while (objects.hasNext()) {
-            Jugadores jug = objects.next();
+            //Jugadores jug = objects.next();
 
-            System.out.println((i++) + "\t: " + jug.getNombre() + "*" +
-                    jug.getDeporte() + "*" + jug.getCiudad() + "*" + jug.getEdad());
+           // System.out.println((i++) + "\t: " + jug.getNombre() + "*" +
+                   // jug.getDeporte() + "*" + jug.getCiudad() + "*" + jug.getEdad());
         }
         System.out.println("------------");
 
@@ -54,10 +54,10 @@ public class Ejemplo_2_Paises_Jugadores {
         System.out.println("Jugadores que juegan al tenis: ");
 
         while(objects1.hasNext()){
-            Jugadores jug = objects1.next();
+            /*Jugadores jug = objects1.next();
 
             System.out.println((i++) + "\t: " + jug.getNombre() + "*" +
-                    jug.getDeporte() + "*" + jug.getCiudad() + "*" + jug.getEdad());
+                    jug.getDeporte() + "*" + jug.getCiudad() + "*" + jug.getEdad());*/
         }
         System.out.println("------------");
 
@@ -97,11 +97,11 @@ public class Ejemplo_2_Paises_Jugadores {
         System.out.println(mensaje);
         int i = 1;
         while(objects.hasNext()){
-            Jugadores jug = objects.next();
+            /*Jugadores jug = objects.next();
 
             System.out.println((i++) + "\t: " + jug.getNombre() + "*" +
                     jug.getDeporte() + "*" + jug.getCiudad() + "*" + jug.getEdad()
-                    + "*" + jug.getPais().getNombrePais());
+                    + "*" + jug.getPais().getNombrePais());*/
         }
         System.out.println("------------");
     }

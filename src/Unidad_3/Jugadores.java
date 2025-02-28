@@ -1,5 +1,5 @@
 package Unidad_3;
-
+import java.io.Serializable;
 public class Jugadores {
         private String nombre;
         private String deporte;
@@ -13,7 +13,6 @@ public class Jugadores {
             this.deporte = deporte;
             this.ciudad = ciudad;
             this.edad = edad;
-            this.pais = pais;
         }
 
         public void setNombre(String nombre) { this.nombre = nombre; }

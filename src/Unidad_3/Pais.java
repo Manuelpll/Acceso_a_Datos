@@ -1,5 +1,5 @@
 package Unidad_3;
-
+import java.io.Serializable;
 public class Pais {
     private int idPais;
     private String nombrePais;
